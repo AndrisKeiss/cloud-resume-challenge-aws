@@ -1,0 +1,693 @@
+/* Custom Styles for UI/UX Enhancements */
+
+/* Collapsible Case Study Styles */
+.case-study-header {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.case-study-header:hover {
+    opacity: 0.9;
+}
+
+.case-study-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    user-select: text;
+}
+
+.case-study-content.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.4s ease-in;
+}
+
+.case-study-chevron {
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    color: #ffb400;
+}
+
+.case-study-chevron.rotated {
+    transform: rotate(180deg);
+}
+
+.case-study-summary {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    border-left: 3px solid #ffb400;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enable text selection globally */
+body, p, div, span, h1, h2, h3, h4, h5, h6, li, td, th {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #333;
+    color: #fff;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: #ffb400;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255,180,0,0.3);
+}
+
+.back-to-top.visible {
+    display: flex;
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Service Card Styles */
+.service-header {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.service-header:hover {
+    opacity: 0.9;
+}
+
+.service-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    user-select: text;
+}
+
+.service-content.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.4s ease-in;
+}
+
+.service-chevron {
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    color: #ffb400;
+}
+
+.service-chevron.rotated {
+    transform: rotate(180deg);
+}
+
+.service-summary {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    border-left: 3px solid #ffb400;
+}
+
+/* Reusable card styles */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Experience Collapsible Styles */
+.experience-header {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.experience-header:hover {
+    opacity: 0.9;
+}
+
+.experience-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    user-select: text;
+}
+
+.experience-content.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.4s ease-in;
+}
+
+.experience-chevron {
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    color: #ffb400;
+}
+
+.experience-chevron.rotated {
+    transform: rotate(180deg);
+}
+
+.experience-summary {
+    padding: 12px 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Utility Classes for Better Organization */
+.intro-title {
+    margin: 0 0 15px 0;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 300;
+}
+
+.intro-title-name {
+    font-weight: 600;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.intro-divider {
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #ffb400 0%, #ff9500 100%);
+    margin: 25px 0;
+    border-radius: 2px;
+}
+
+.intro-subtitle {
+    margin: 0 0 35px 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #444;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+}
+
+.intro-text {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    line-height: 28px;
+    color: #555;
+}
+
+.intro-text:last-child {
+    margin-bottom: 0;
+}
+
+.intro-text strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 32px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+}
+
+.btn-download:hover {
+    background: #ffb400;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(255,180,0,0.25);
+}
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 35px;
+    background: #ffb400;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255,180,0,0.3);
+}
+
+.btn-cta:hover {
+    background: #ff9500;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255,180,0,0.4);
+}
+
+.signature-img {
+    max-height: 200px;
+    display: block;
+    opacity: 0.85;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+}
+
+/* Service Card Styles */
+.service-card {
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.service-icon {
+    width: 45px;
+    height: 45px;
+    background: #ffb400;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.service-icon i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.service-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+}
+
+/* Case Study Card Styles */
+.case-study-card {
+    padding: 35px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid #ffb400;
+}
+
+.case-study-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ffb400 0%, #ff9500 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(255,180,0,0.3);
+    flex-shrink: 0;
+}
+
+.case-study-icon i {
+    color: #fff;
+    font-size: 26px;
+}
+
+.case-study-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    flex: 1;
+}
+
+/* Experience Card Styles */
+.experience-card {
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.experience-logo {
+    padding-right: 20px;
+    flex-shrink: 0;
+}
+
+.experience-logo img {
+    max-width: 70px;
+    border-radius: 8px;
+}
+
+.experience-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    flex: 1;
+}
+
+.experience-role {
+    font-size: 14px;
+    color: #888;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Credential Card Styles */
+.credential-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.credential-logo {
+    max-width: 55px;
+    margin-right: 15px;
+}
+
+.credential-title {
+    margin: 0 0 5px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.credential-org {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Highlight Card Styles */
+.highlight-card {
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    height: 100%;
+}
+
+.highlight-icon {
+    width: 50px;
+    height: 50px;
+    background: #ffb400;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.highlight-icon i {
+    color: #fff;
+    font-size: 22px;
+}
+
+.highlight-title {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.highlight-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #555;
+}
+
+/* Contact Card Styles */
+.contact-card {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.contact-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.contact-card i {
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+.contact-card .fa-linkedin {
+    color: #0077b5;
+}
+
+.contact-card .fa-twitter {
+    color: #1DA1F2;
+}
+
+.contact-card .fa-github {
+    color: #333;
+}
+
+.contact-card span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Button Responsive Styles */
+@media screen and (max-width: 767px) {
+    /* Download Resume button */
+    a.button[href*="CV"],
+    a[style*="display: inline-flex"][href*="CV"],
+    a[style*="display: inline-flex"][href*="assets/docs"] {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    /* Get in Touch button */
+    a[href="#chaptercontact"][style*="display: inline-flex"],
+    a[href="#chaptercontact"] {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    /* Contact social cards - make them stack on mobile */
+    div[style*="display: flex"][style*="gap: 20px"] {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+    
+    /* Individual contact cards */
+    a[href*="linkedin"],
+    a[href*="twitter"],
+    a[href*="x.com"],
+    a[href*="github"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 18px !important;
+        box-sizing: border-box;
+        justify-content: center !important;
+    }
+    
+    a[href*="linkedin"] i,
+    a[href*="twitter"] i,
+    a[href*="x.com"] i,
+    a[href*="github"] i {
+        font-size: 20px !important;
+        margin-right: 10px !important;
+    }
+    
+    a[href*="linkedin"] span,
+    a[href*="twitter"] span,
+    a[href*="x.com"] span,
+    a[href*="github"] span {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Smaller buttons on very small screens */
+    a.button[href*="CV"],
+    a[style*="display: inline-flex"][href*="CV"],
+    a[style*="display: inline-flex"][href*="assets/docs"],
+    a[href="#chaptercontact"][style*="display: inline-flex"],
+    a[href="#chaptercontact"] {
+        padding: 12px 16px !important;
+        font-size: 13px !important;
+    }
+    
+    /* Contact cards on small mobile */
+    a[href*="linkedin"],
+    a[href*="twitter"],
+    a[href*="x.com"],
+    a[href*="github"] {
+        padding: 12px 16px !important;
+    }
+    
+    a[href*="linkedin"] i,
+    a[href*="twitter"] i,
+    a[href*="x.com"] i,
+    a[href*="github"] i {
+        font-size: 18px !important;
+        margin-right: 8px !important;
+    }
+    
+    a[href*="linkedin"] span,
+    a[href*="twitter"] span,
+    a[href*="x.com"] span,
+    a[href*="github"] span {
+        font-size: 13px !important;
+    }
+}
+
+/* Responsive improvements for credentials and highlights */
+@media screen and (max-width: 767px) {
+    /* Credential cards - stack and improve spacing */
+    .credentials-con .row .col-6 {
+        width: 100% !important;
+        margin-bottom: 15px;
+        float: none;
+    }
+    
+    /* Credential card content - adjust flex for mobile */
+    .credentials-con .row .col-6 > div[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 20px !important;
+    }
+    
+    .credentials-con .row .col-6 img[src*="logo"] {
+        margin-right: 0 !important;
+        margin-bottom: 15px;
+    }
+    
+    /* Education cards - stack */
+    .education-details {
+        margin-bottom: 20px !important;
+    }
+    
+    /* Adjust credential card text for mobile */
+    .credentials-con .row .col-6 h5 {
+        font-size: 14px !important;
+    }
+    
+    .credentials-con .row .col-6 span {
+        font-size: 11px !important;
+        line-height: 1.4;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    /* Further mobile adjustments - credentials section */
+    .credentials-con .row .col-6 > div {
+        padding: 15px !important;
+    }
+    
+    /* Make credential cards full width with better spacing */
+    .credentials-con .row {
+        margin-bottom: 15px;
+    }
+    
+    .credentials-con .row .col-6 {
+        width: 100% !important;
+        margin-bottom: 15px;
+        float: none;
+    }
+    
+    /* Highlights section - ensure full width for col-6 items */
+    .credentials-con .row .col-6[style*="height: 100%"] {
+        width: 100% !important;
+        margin-bottom: 20px;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Small mobile adjustments */
+    .credentials-con .row .col-6 > div {
+        padding: 12px !important;
+    }
+    
+    .credentials-con .row .col-6 img[src*="logo"] {
+        max-width: 45px !important;
+    }
+    
+    .credentials-con .row .col-6 h5 {
+        font-size: 13px !important;
+    }
+    
+    /* Adjust icon sizes in highlights */
+    .credentials-con .row .col-6 .fa-medal,
+    .credentials-con .row .col-6 .fa-running,
+    .credentials-con .row .col-12 .fa-trophy {
+        font-size: 18px !important;
+    }
+    
+    .credentials-con .row .col-6 div[style*="width: 50px"] {
+        width: 45px !important;
+        height: 45px !important;
+    }
+}

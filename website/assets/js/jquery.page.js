@@ -72,15 +72,15 @@ var pagetitle = $(document).find("title").text();
 
 
 
-                $('#link_introduction').removeClass('active');
-                $('#link_about').removeClass('active');
-                $('#link_skills').removeClass('active');
-                $('#link_experience').removeClass('active');
-                $('#link_education').removeClass('active');
-                $('#link_credentials').removeClass('active');
-                $('#link_contact').removeClass('active');
+                // Remove active class from all navigation links
+                $menu.find('nav a span').removeClass('active');
 
-                $('#link_' + chapter).addClass('active');
+                // Add active class to current chapter
+                if (chapter) {
+                    $('#link_' + chapter).addClass('active');
+                } else {
+                    $('#link_introduction').addClass('active');
+                }
 
                 if ($article.length) {
 
@@ -120,15 +120,15 @@ var pagetitle = $(document).find("title").text();
 
                     History.pushState(null, null, '?page=' + chapter);
 
-                    $('#link_introduction').removeClass('active');
-                    $('#link_about').removeClass('active');
-                    $('#link_skills').removeClass('active');
-                    $('#link_experience').removeClass('active');
-                    $('#link_education').removeClass('active');
-                    $('#link_credentials').removeClass('active');
-                    $('#link_contact').removeClass('active');
+                    // Remove active class from all navigation links
+                    $('#link_introduction, #link_services, #link_experience, #link_expertise, #link_contact, #link_about, #link_skills, #link_education, #link_credentials').removeClass('active');
 
-                    $('#link_' + chapter).addClass('active');
+                    // Add active class to current chapter
+                    if (chapter) {
+                        $('#link_' + chapter).addClass('active');
+                    } else {
+                        $('#link_introduction').addClass('active');
+                    }
 
                 }
 

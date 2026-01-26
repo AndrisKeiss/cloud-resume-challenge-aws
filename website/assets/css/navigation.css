@@ -1,0 +1,325 @@
+/* Navigation Responsive Styles */
+
+/* Desktop Navigation - Default */
+.menu {
+    position: fixed;
+    z-index: 100;
+    color: #f8f8f8;
+    background: #1a1a1a;
+    width: 200px;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.menu nav {
+    position: relative;
+    width: 200px !important;
+    padding: 20px 0;
+}
+
+.menu nav a {
+    display: block;
+    padding: 16px 30px;
+    text-align: left;
+    outline: none;
+    border-bottom: 1px solid #2a2a2a;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s;
+    text-decoration: none;
+    box-sizing: border-box;
+    clear: both;
+    position: relative;
+}
+
+.menu nav a span {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.menu nav a:last-child {
+    border-bottom: none;
+}
+
+.menu nav a:hover {
+    color: #ffb400;
+    background-color: rgba(255, 180, 0, 0.05);
+}
+
+.menu nav a span.active {
+    color: #ffb400;
+    font-weight: 400;
+}
+
+.menu-link {
+    display: none;
+}
+
+/* Logo styling */
+.menu .logo {
+    padding: 40px 20px 30px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.menu .logo img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Social links in navigation */
+.menu .social {
+    padding: 30px;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #2a2a2a;
+}
+
+.menu .social > div {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu .social a {
+    color: #8a8a8a;
+    font-size: 20px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.menu .social a:hover {
+    color: #ffb400;
+}
+
+/* Copyright */
+.menu .copyright {
+    padding: 20px 30px;
+    font-size: 10px;
+    line-height: 16px;
+    color: #666;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+}
+
+/* Mobile Navigation (768px and below) */
+@media screen and (max-width: 768px) {
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: #1a1a1a;
+        border-bottom: 1px solid #333;
+    }
+    
+    .menu .logo {
+        display: none;
+    }
+    
+    .menu-link {
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        color: #FFF;
+        text-decoration: none;
+        z-index: 1001;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    
+    .menu-link:hover {
+        color: #ffb400;
+    }
+    
+    .menu nav {
+        display: none;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        width: 100% !important;
+        background-color: #1a1a1a;
+        max-height: calc(100vh - 50px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0;
+        z-index: 999;
+        box-sizing: border-box;
+    }
+    
+    nav.active {
+        display: block !important;
+    }
+    
+    .menu nav::before,
+    .menu nav::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+    .menu nav a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 16px 20px;
+        border-bottom: 1px solid #2a2a2a;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        box-sizing: border-box;
+        text-align: left;
+        clear: both;
+        position: relative;
+    }
+    
+    .menu nav a span {
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+    }
+    
+    .menu nav a:last-child {
+        border-bottom: 1px solid #2a2a2a;
+        margin-bottom: 0;
+        padding-bottom: 16px;
+    }
+    
+    /* Ensure all menu items are properly aligned */
+    .menu nav a,
+    .menu nav a:last-child {
+        float: none;
+        clear: both;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .menu .social {
+        display: none !important;
+    }
+    
+    .menu .copyright {
+        display: none;
+    }
+    
+    .m-social {
+        display: none !important;
+    }
+}
+
+/* iPad Portrait (768px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .menu {
+        width: 200px;
+        height: 100%;
+    }
+    
+    .menu nav {
+        width: 200px !important;
+        padding: 20px 0;
+    }
+    
+    .menu nav a {
+        padding: 14px 25px;
+        font-size: 12px;
+    }
+    
+    .menu .logo {
+        padding: 30px 15px 20px;
+    }
+    
+    .menu .logo img {
+        max-width: 100px;
+    }
+    
+    .menu .social {
+        padding: 25px 20px;
+        bottom: 70px;
+    }
+    
+    .menu .social a {
+        font-size: 18px;
+    }
+    
+    .menu .copyright {
+        padding: 15px 20px;
+        font-size: 9px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .menu {
+        height: 50px;
+    }
+    
+    .menu-link {
+        top: 10px;
+        right: 12px;
+        width: 28px;
+        height: 28px;
+        font-size: 22px;
+    }
+    
+    .menu nav {
+        top: 50px;
+    }
+    
+    .menu nav a {
+        padding: 14px 18px;
+        font-size: 13px;
+        text-align: left;
+    }
+    
+    .menu nav a span {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+/* Very Small Mobile (360px and below) */
+@media screen and (max-width: 360px) {
+    .menu nav a {
+        padding: 12px 15px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    
+    .menu nav a span {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .menu nav {
+        max-height: calc(100vh - 50px);
+    }
+    
+    .menu nav a {
+        padding: 12px 20px;
+    }
+}

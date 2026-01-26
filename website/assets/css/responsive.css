@@ -1,5 +1,16 @@
 /* Media Queries */
 
+/* Desktop - Show social links in navigation */
+@media screen and (min-width: 769px) {
+    .social {
+        display: block !important;
+    }
+    
+    .m-social {
+        display: none !important;
+    }
+}
+
 @media screen and (max-width: 1700px) {
     .blog-list iframe,
     embed,
@@ -94,9 +105,7 @@
     .contact-form {
         padding-bottom: 200px;
     }
-    .menu nav a {
-        padding: 11px 0;
-    }
+    /* Navigation styles handled in navigation.css */
     .pagerblock {
         margin: 0 0 0 20%;
     }
@@ -192,15 +201,7 @@
     .codrops-top a:nth-child(1) {
         left: 10px;
     }
-    .menu {
-        position: fixed;
-        width: 100%;
-        height: 460px;
-    }
-    .menu nav {
-        top: 50px;
-        bottom: 20px;
-    }
+    /* Navigation styles moved to navigation.css */
     .content-scroller {
         position: relative;
         height: auto;
@@ -223,7 +224,7 @@
     }
     .m-social {
         margin: 0;
-        display: block;
+        display: none !important; /* Hide social links in nav on mobile */
     }
     .logo {
         display: none;
@@ -243,47 +244,13 @@
     .m-social span a {
         padding-right: 10px;
     }
-    .menu-link {
-        display: block;
-        float: right;
-        padding: 14px 15px 0 0;
-        width: 25px;
-        height: 25px;
-        font-size: 23px;
-        color: #FFF;
-    }
-    .menu-link:hover {
-        color: #999;
-    }
-    .menu nav a {
-        margin: 0 17px
-    }
-    .menu nav a:last-child {
-        border-bottom: none
-    }
-    .menu nav {
-        display: none
-    }
-    nav.active {
-        display: block;
-        overflow: visible !important;
-        width: 100% !important;
-        background-color: #000;
-        height: 400px;
-    }
-    nav.active .jspContainer {
-        background-color: #000;
-        height: 380px !important;
-        width: 100% !important;
-    }
-    .menu {
-        height: 50px
-    }
+    /* Navigation menu-link styles handled in navigation.css */
+    /* Navigation styles moved to navigation.css - handled there */
     .copyright {
         display: none
     }
     .social {
-        display: none
+        display: none !important; /* Hide social links in nav on mobile */
     }
     .grid li {
         width: 100%
@@ -668,5 +635,735 @@
         margin: 0 0 0 0;
         padding-top: 130px !important;
         width: 86%;
+    }
+}
+
+/* ==========================================================================
+   Enhanced Responsive Styles for Modern Devices
+   ========================================================================== */
+
+/* Tablet and Small Desktop (1024px - 1200px) */
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .content {
+        width: 750px;
+    }
+    
+    .inner {
+        padding: 60px 50px;
+    }
+    
+    /* Service cards - better spacing */
+    .service-header,
+    .case-study-header,
+    .experience-header {
+        padding: 20px;
+    }
+    
+    .service-content,
+    .case-study-content,
+    .experience-content {
+        padding: 0 20px 20px;
+    }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .content {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .inner {
+        padding: 50px 40px;
+    }
+    
+    h2 {
+        font-size: 38px;
+        line-height: 44px;
+    }
+    
+    /* Introduction section */
+    .introduction h2 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+    
+    /* Cards and sections */
+    .service-header,
+    .case-study-header {
+        flex-wrap: wrap;
+    }
+    
+    .service-header h4,
+    .case-study-header h4 {
+        font-size: 18px;
+    }
+    
+    /* Credentials - two columns on tablet */
+    .credentials-con .row .col-6 {
+        width: 48%;
+        margin-right: 2%;
+    }
+    
+    .credentials-con .row .col-6:nth-child(2n) {
+        margin-right: 0;
+    }
+    
+    /* Show social links on tablet (desktop view) */
+    .social {
+        display: block !important;
+    }
+    
+    .m-social {
+        display: none !important;
+    }
+}
+
+/* Mobile Landscape and Small Tablets (600px - 767px) */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .inner {
+        padding: 120px 35px 50px;
+    }
+    
+    h2 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    
+    .title-divider {
+        margin: 20px 0 35px;
+    }
+    
+    /* Introduction section */
+    .introduction .inner {
+        margin: 35% 0 0 0;
+        padding: 0 30px;
+    }
+    
+    .introduction h2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    
+    /* Service and case study cards */
+    .service-header,
+    .case-study-header {
+        padding: 25px 20px;
+    }
+    
+    .service-header h4,
+    .case-study-header h4 {
+        font-size: 18px;
+    }
+    
+    .service-summary,
+    .case-study-summary {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+    
+    /* Experience cards */
+    .experience-header {
+        padding: 20px;
+    }
+    
+    .experience-header img {
+        max-width: 60px;
+    }
+    
+    /* Contact form */
+    .contact-form input[type="text"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 14px;
+    }
+    
+    /* Buttons - full width on mobile landscape */
+    .button,
+    a[style*="display: inline-flex"][href*="CV"],
+    a[style*="display: inline-flex"][href*="assets/docs"],
+    a[style*="display: inline-flex"][href*="#chaptercontact"],
+    a[href="#chaptercontact"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+        text-align: center;
+        justify-content: center;
+        box-sizing: border-box;
+        display: flex !important;
+    }
+    
+    /* Social links - stack on mobile landscape */
+    .contact-con .row .col-12 > div[style*="display: flex"],
+    div[style*="display: flex"][style*="gap: 20px"],
+    div[style*="display: flex"][style*="flex-wrap: wrap"] {
+        flex-direction: column !important;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    /* Contact cards - full width */
+    a[href*="linkedin"],
+    a[href*="twitter"],
+    a[href*="x.com"],
+    a[href*="github"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 18px !important;
+        box-sizing: border-box;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Mobile Portrait (480px - 599px) */
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .inner {
+        padding: 110px 25px 40px;
+    }
+    
+    h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    .title-divider {
+        width: 60px;
+        height: 4px;
+        margin: 18px 0 30px;
+    }
+    
+    /* Introduction section */
+    .introduction .inner {
+        margin: 30% 0 0 0;
+        padding: 0 25px;
+    }
+    
+    .introduction h2 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    
+    /* About section */
+    .about .inner p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+    
+    /* Service cards */
+    .service-header,
+    .case-study-header {
+        padding: 20px 18px;
+        flex-wrap: wrap;
+    }
+    
+    .service-header > div[style*="width: 45px"],
+    .case-study-header > div[style*="width: 60px"] {
+        width: 40px !important;
+        height: 40px !important;
+        margin-right: 12px;
+    }
+    
+    .service-header h4,
+    .case-study-header h4 {
+        font-size: 16px;
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .service-summary,
+    .case-study-summary {
+        padding: 12px 16px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    /* Experience cards */
+    .experience-header {
+        padding: 18px;
+    }
+    
+    .experience-header img {
+        max-width: 55px;
+        padding-right: 15px;
+    }
+    
+    .experience-header h5 {
+        font-size: 16px;
+    }
+    
+    /* Credentials */
+    .credentials-con .row .col-6 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .credentials-con .row .col-6 > div[style*="display: flex"] {
+        padding: 18px !important;
+    }
+    
+    /* Portfolio case studies */
+    .case-study-content > div {
+        padding: 18px !important;
+    }
+    
+    .case-study-content h5 {
+        font-size: 13px;
+    }
+    
+    .case-study-content p {
+        font-size: 13px;
+        line-height: 22px;
+    }
+    
+    /* Contact section */
+    .contact-con h3 {
+        font-size: 18px;
+    }
+    
+    .contact-con p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    /* Buttons - full width on mobile */
+    .button,
+    a[style*="display: inline-flex"][href*="CV"],
+    a[style*="display: inline-flex"][href*="assets/docs"],
+    a[style*="display: inline-flex"][href*="#chaptercontact"],
+    a[href="#chaptercontact"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+        text-align: center;
+        justify-content: center;
+        box-sizing: border-box;
+        display: flex !important;
+    }
+    
+    /* Contact social cards container - stack on mobile */
+    div[style*="display: flex"][style*="gap: 20px"],
+    div[style*="display: flex"][style*="flex-wrap: wrap"] {
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100%;
+    }
+    
+    /* Individual contact cards - full width */
+    a[href*="linkedin"],
+    a[href*="twitter"],
+    a[href*="x.com"],
+    a[href*="github"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 18px !important;
+        box-sizing: border-box;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    a[href*="linkedin"] i,
+    a[href*="twitter"] i,
+    a[href*="x.com"] i,
+    a[href*="github"] i {
+        font-size: 20px !important;
+        margin-right: 10px !important;
+    }
+    
+    a[href*="linkedin"] span,
+    a[href*="twitter"] span,
+    a[href*="x.com"] span,
+    a[href*="github"] span {
+        font-size: 14px !important;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Small Mobile (320px - 479px) */
+@media screen and (max-width: 479px) {
+    .inner {
+        padding: 100px 20px 35px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    
+    h3 {
+        font-size: 16px;
+        margin: 30px 0 8px;
+    }
+    
+    .title-divider {
+        width: 50px;
+        height: 3px;
+        margin: 15px 0 25px;
+    }
+    
+    /* Introduction section */
+    .introduction .inner {
+        margin: 25% 0 0 0;
+        padding: 0 20px;
+    }
+    
+    .introduction h2 {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .introduction h3 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    
+    .introduction p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    /* About section */
+    .about .inner p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    /* Service cards */
+    .service-header,
+    .case-study-header {
+        padding: 18px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .service-header > div[style*="width: 45px"],
+    .case-study-header > div[style*="width: 60px"] {
+        width: 38px !important;
+        height: 38px !important;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+    
+    .service-header h4,
+    .case-study-header h4 {
+        font-size: 15px;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    .service-chevron,
+    .case-study-chevron {
+        position: absolute;
+        top: 18px;
+        right: 15px;
+    }
+    
+    .service-summary,
+    .case-study-summary {
+        padding: 10px 14px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    
+    .service-content,
+    .case-study-content {
+        padding: 0 15px 15px;
+    }
+    
+    .service-content p,
+    .case-study-content p {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    
+    /* Experience cards */
+    .experience-header {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .experience-header > div[style*="padding-right"] {
+        padding-right: 15px;
+    }
+    
+    .experience-header img {
+        max-width: 50px;
+    }
+    
+    .experience-header h5 {
+        font-size: 15px;
+    }
+    
+    .experience-header span {
+        font-size: 12px;
+    }
+    
+    .experience-content {
+        padding: 0 15px 15px;
+    }
+    
+    .experience-content p {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    
+    /* Credentials */
+    .credentials-con .row .col-6 > div[style*="display: flex"] {
+        padding: 15px !important;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .credentials-con .row .col-6 img {
+        max-width: 50px;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+    
+    .credentials-con .row .col-6 h5 {
+        font-size: 13px;
+    }
+    
+    .credentials-con .row .col-6 span {
+        font-size: 11px;
+    }
+    
+    /* Education cards */
+    .education-details {
+        padding: 18px 15px;
+    }
+    
+    .education-details img {
+        max-width: 50px;
+    }
+    
+    .education-details h5 {
+        font-size: 14px;
+    }
+    
+    .education-details h4 {
+        font-size: 13px;
+    }
+    
+    /* Portfolio case studies */
+    .case-study-content > div {
+        padding: 15px !important;
+    }
+    
+    .case-study-content h5 {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .case-study-content p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    /* Contact section */
+    .contact-con h3 {
+        font-size: 16px;
+    }
+    
+    .contact-con p {
+        font-size: 13px;
+        line-height: 22px;
+    }
+    
+    .contact-con .row .col-12 > div[style*="display: flex"] {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .contact-con .row .col-12 > div[style*="display: flex"] > a {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+    
+    /* Contact form */
+    .contact-form input[type="text"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .contact-form input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    /* Buttons - ensure proper sizing on small mobile */
+    .button,
+    a[style*="display: inline-flex"][href*="CV"],
+    a[style*="display: inline-flex"][href*="assets/docs"],
+    a[style*="display: inline-flex"][href*="#chaptercontact"],
+    a[href="#chaptercontact"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px 16px !important;
+        font-size: 13px !important;
+        text-align: center;
+        justify-content: center;
+        box-sizing: border-box;
+        display: flex !important;
+    }
+    
+    /* Contact social cards container - stack on small mobile */
+    div[style*="display: flex"][style*="gap: 20px"],
+    div[style*="display: flex"][style*="flex-wrap: wrap"] {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100%;
+    }
+    
+    /* Individual contact cards - full width on small mobile */
+    a[href*="linkedin"],
+    a[href*="twitter"],
+    a[href*="x.com"],
+    a[href*="github"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px 16px !important;
+        box-sizing: border-box;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    a[href*="linkedin"] i,
+    a[href*="twitter"] i,
+    a[href*="x.com"] i,
+    a[href*="github"] i {
+        font-size: 18px !important;
+        margin-right: 8px !important;
+    }
+    
+    a[href*="linkedin"] span,
+    a[href*="twitter"] span,
+    a[href*="x.com"] span,
+    a[href*="github"] span {
+        font-size: 13px !important;
+    }
+    
+    /* Highlights section */
+    .credentials-con .row .col-6[style*="height: 100%"],
+    .credentials-con .row .col-12[style*="padding: 25px"] {
+        padding: 18px 15px !important;
+    }
+    
+    .credentials-con .row .col-6 div[style*="width: 50px"],
+    .credentials-con .row .col-12 div[style*="width: 50px"] {
+        width: 42px !important;
+        height: 42px !important;
+        margin-right: 12px;
+    }
+    
+    .credentials-con .row .col-6 h5,
+    .credentials-con .row .col-12 h5 {
+        font-size: 14px;
+    }
+    
+    .credentials-con .row .col-6 p,
+    .credentials-con .row .col-12 p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .back-to-top i {
+        font-size: 16px;
+    }
+    
+    /* Menu improvements */
+    .menu nav a {
+        padding: 14px 20px;
+        font-size: 13px;
+    }
+    
+    /* Logo in menu */
+    .logo img {
+        max-width: 100px;
+        height: auto;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .service-header,
+    .case-study-header,
+    .experience-header {
+        min-height: 48px;
+    }
+    
+    .button,
+    a[style*="display: inline-flex"] {
+        min-height: 44px;
+    }
+    
+    .menu nav a {
+        min-height: 44px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .card-hover:hover {
+        transform: none;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo img,
+    .credentials-con img,
+    .experience-header img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .inner {
+        padding: 100px 30px 40px;
+    }
+    
+    .menu {
+        height: 45px;
+    }
+    
+    .introduction .inner {
+        margin: 20% 0 0 0;
+    }
+    
+    h2 {
+        font-size: 28px;
     }
 }
